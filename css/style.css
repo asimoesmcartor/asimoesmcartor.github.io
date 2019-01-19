@@ -181,10 +181,10 @@ p + p {
 
 #lines-circle-canvas {
   display: block;
-  width: 350px;
-  height: 350px;
+  width: 450px;
+  height: 450px;
   overflow: hidden;
   /* border-radius: 50%; */
   border: 1px solid white;
-  margin: 0 auto;
+  margin: -6%;
 }
