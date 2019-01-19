@@ -184,7 +184,6 @@ p + p {
   width: 450px;
   height: 450px;
   overflow: hidden;
-  /* border-radius: 50%; */
   border: 1px solid white;
   margin: -6%;
 }
