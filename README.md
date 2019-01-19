@@ -1,3 +1,3 @@
 ### In Development (may look bad/weird)
 
-I am working on building out a new version of my photography site.
+Just a simple dev area where I test out various JavaScript things.
