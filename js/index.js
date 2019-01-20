@@ -155,6 +155,9 @@ let generativeCircle = () => {
     context.strokeStyle = rndPastelColor;
     context.stroke();
   }
+
+  var boxShadowColor = '0px 0px 400px -15px ' + rndPastelColor;
+  document.getElementById('lines-circle').style.boxShadow = boxShadowColor;
 };
 
 let redrawCircle = () => {
