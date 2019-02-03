@@ -9,9 +9,11 @@ export default function sketch(p) {
     const dpr = window.devicePixelRatio;
     p.width = size * dpr;
     p.height = size * dpr;
-    const canvasHeight = p.height / 3;
-    const canvasWidth = p.width / 3;
+    const canvasHeight = p.height / 5;
+    const canvasWidth = p.width / 5;
     p.createCanvas(canvasWidth, canvasHeight, p.WEBGL);
+    p.frameRate(60);
+    // p.position(0, 0);
   };
 
   //   p.myCustomRedrawAccordingToNewPropsHandler = function(props) {
@@ -48,20 +50,18 @@ export default function sketch(p) {
   p.draw = function() {
     for (var i = 0; i < lines.length; i++) {
       for (var j = 0; j < lines[i].length - 2; j++) {
-        // let xc = (lines[i][j].x + lines[i][j + 1].x) / 2;
-        // let yc = (lines[i][j].y + lines[i][j + 1].y) / 2;
+        // var xc = (lines[i][j].x + lines[i][j + 1].x) / 2;
+        // var yc = (lines[i][j].y + lines[i][j + 1].y) / 2;
         p.beginShape();
         p.vertex(lines[i][j].x, lines[i][j].y);
         p.vertex(lines[i][j + 1].x, lines[i][j + 1].y);
-        p.vertex(lines[i][j].x, lines[i][j].y);
         p.endShape();
       }
-      p.beginShape();
-      p.vertex(lines[i][j].x, lines[i][j].y);
-      p.vertex(lines[i][j + 1].x, lines[i][j + 1].y);
-      p.endShape();
-
       p.stroke(rndPastelColor);
     }
   };
+  //   p.save();
+  //   p.globalCompositeOperation = 'destination-out';
+  //   p.fill();
+  //   p.restore();
 }
