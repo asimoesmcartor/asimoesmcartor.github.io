@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import Post from './Post';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Row, Col } from 'react-bootstrap';
+
+//Components imports
+import NavMenu from './components/nav';
+import Cards from './components/cards';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div className="App">
-          <header className="App-header">
-            <Link to="/">
-              <img src={logo} className="App-logo" alt="logo" />
-            </Link>
-            <Link to="/">Home</Link>
-            <Link to="/post/">Post</Link>
-          </header>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/post/" component={Post} />
-          </Switch>
+          <NavMenu />
+
+          <Container>
+            <Row>
+              <Col />
+              <Col xs={6}>
+                <Cards />
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/post/" component={Post} />
+                </Switch>
+              </Col>
+              <Col />
+            </Row>
+          </Container>
         </div>
       </BrowserRouter>
     );
