@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 //Components imports
 import NavMenu from './components/nav';
-import Cards from './components/cards';
+// import Cards from './components/cards';
 
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
             <Row>
               <Col />
               <Col xs={6}>
-                <Cards />
+                {/* <Cards /> */}
                 <Switch>
                   <Route exact path="/" component={Home} />
                   <Route path="/post/" component={Post} />
