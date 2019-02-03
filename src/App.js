@@ -5,7 +5,7 @@ import Post from './Post';
 import { Container, Row, Col } from 'react-bootstrap';
 
 //Components imports
-import NavMenu from './components/nav';
+// import NavMenu from './components/nav';
 // import Cards from './components/cards';
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <NavMenu />
+          {/* <NavMenu /> */}
 
           <Container>
             <Row>
