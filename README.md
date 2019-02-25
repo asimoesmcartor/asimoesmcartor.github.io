@@ -1,8 +1,11 @@
-### If you see this, that means I need to deploy!
+# Development Branch
 
-# In Development (may look bad/weird)
+This branch is held to keep a record of my main production code that is used prior to the deploy. The master branch is currently the deploy branch. Thus, the gh-pages website shows my master branch deployed code (based off of the app from development branch code).
+
+### In Development (may look bad/weird)
+
+- Successfully split out Generative Lines app and imported it into React.
 
 In progress:
 
-1. Splitting app into two seperate apps using branches -- vue-app-master and react-app-master
-2. Creating new react-app-master to house react components to be able to easily render my generative projects as I see fit.
+- Creating Generative Stars app.
