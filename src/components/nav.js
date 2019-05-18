@@ -10,8 +10,13 @@ const NavMenu = () => (
       </Nav.Link>
     </Nav.Item>
     <Nav.Item>
-      <Nav.Link eventKey="/post">
-        <Link to="/post/">Post</Link>
+      <Nav.Link eventKey="/gallery">
+        <Link to="/gallery/">Gallery</Link>
+      </Nav.Link>
+    </Nav.Item>
+    <Nav.Item>
+      <Nav.Link eventKey="/projects">
+        <Link to="/projects/">Projects</Link>
       </Nav.Link>
     </Nav.Item>
   </Nav>
