@@ -45,7 +45,7 @@ const { photoIndex, isOpen, images } = this.state;
   return (
       <MDBContainer className="mt-5">
         <div className="mdb-lightbox no-margin">
-          <MDBRow className="masonry-with-flex">
+          <MDBRow className="">
             {this.renderImages()}
           </MDBRow>
         </div>

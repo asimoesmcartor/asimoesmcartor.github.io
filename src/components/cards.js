@@ -21,7 +21,7 @@ const Cards = () => (
   
 
   <MDBRow className="text-center">
-    <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
+    <MDBCol lg="6" md="12" className="mb-lg-0 mb-6">
       <MDBView className="overlay rounded z-depth-1" waves>
         <img
           src={process.env.PUBLIC_URL + '/images/gallery-9.jpg'}
@@ -37,12 +37,12 @@ const Cards = () => (
         <p className="grey-text">
           Examples of a few photos I have taken around the world.
         </p>
-        <MDBBtn gradient="blue" size="sm">
-          <MDBIcon far icon="camera-retro" className="left white-text" /> Gallery
+        <MDBBtn gradient="blue" size="sm" className="white-text">
+          <MDBIcon fas icon="camera-retro" className="left" /> Gallery
         </MDBBtn>
       </MDBCardBody>
     </MDBCol>
-    <MDBCol lg="4" md="12" className="mb-lg-0 mb-4">
+    <MDBCol lg="6" md="12" className="mb-lg-0 mb-6">
       <MDBView className="overlay rounded z-depth-1" waves>
         <img
           src={process.env.PUBLIC_URL + '/images/gallery-8.jpg'}
@@ -59,8 +59,8 @@ const Cards = () => (
           This project I ported a JavaScript based random generated squiggly lines 
           based off of the learnings from p5.
         </p>
-        <MDBBtn gradient="blue" size="sm">
-          <MDBIcon far icon="pencil-alt" className="left white-text" /> Generative Lines
+        <MDBBtn gradient="blue" size="sm" className="white-text">
+          <MDBIcon fas icon="pencil-alt" className="left" /> Generative Lines
         </MDBBtn>
       </MDBCardBody>
     </MDBCol>
