@@ -4,9 +4,11 @@ This branch is held to keep a record of my main production code that is used pri
 
 ### In Development (may look bad/weird)
 
+- Added lazy loading feature to images and components.
 - Created centralized hub for my projects.
 - Successfully split out Generative Lines app and imported it into React.
 
 In progress:
 
+- Need to resolve [inline-block issue](https://github.com/Aljullu/react-lazy-load-image-component/issues/33) on homepage cards.
 - Improve styling of new project hub.
