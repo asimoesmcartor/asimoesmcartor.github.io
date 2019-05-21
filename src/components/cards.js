@@ -1,9 +1,9 @@
 import React from 'react';
 import {  MDBRow, MDBCol, MDBCardBody, MDBIcon, MDBBtn, MDBView, MDBMask } from "mdbreact";
 
-// import gallery4 from "../images/gallery-4.jpg";
-// import gallery8 from "../images/gallery-8.jpg";
-// import gallery9 from "../images/gallery-9.jpg";
+//Loads components later to give time for images to come in.
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 
 
@@ -23,9 +23,11 @@ const Cards = () => (
   <MDBRow className="text-center">
     <MDBCol lg="6" md="12" className="mb-lg-0 mb-6">
       <MDBView className="overlay rounded z-depth-1" waves>
-        <img
+        <LazyLoadImage
+          placeholderSrc={process.env.PUBLIC_URL + '/images/preload-images/gallery-9.jpg'}
           src={process.env.PUBLIC_URL + '/images/gallery-9.jpg'}
           alt=""
+          effect="opacity"
           className="img-fluid"
         />
         <a href="/gallery">
@@ -44,9 +46,12 @@ const Cards = () => (
     </MDBCol>
     <MDBCol lg="6" md="12" className="mb-lg-0 mb-6">
       <MDBView className="overlay rounded z-depth-1" waves>
-        <img
+        <LazyLoadImage
+          placeholderSrc={process.env.PUBLIC_URL + '/images/preload-images/gallery-8.jpg'}
           src={process.env.PUBLIC_URL + '/images/gallery-8.jpg'}
           alt=""
+          effect="opacity"
+          wrapperclassName="lazy-load-image-loaded-display"
           className="img-fluid"
         />
         <a href="/projects">

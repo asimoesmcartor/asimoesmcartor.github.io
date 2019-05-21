@@ -3,20 +3,23 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import Lightbox from "react-image-lightbox";
 import "./styles/Lightbox.css";
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
+
+
 class Gallery extends React.Component {
 state = {
   photoIndex: 0,
   isOpen: false,
   images: [
-    '/images/gallery-1.jpg',
-    '/images/gallery-2.jpg',
-    '/images/gallery-3.jpg',
-    '/images/gallery-4.jpg',
-    '/images/gallery-5.jpg',
-    '/images/gallery-6.jpg',
-    '/images/gallery-7.jpg',
-    '/images/gallery-8.jpg',
-    '/images/gallery-9.jpg'
+    'gallery-1.jpg',
+    'gallery-2.jpg',
+    'gallery-4.jpg',
+    'gallery-5.jpg',
+    'gallery-6.jpg',
+    'gallery-7.jpg',
+    'gallery-8.jpg',
+    'gallery-9.jpg'
   ]
 }
 
@@ -30,9 +33,15 @@ return images.map(imageSrc => {
   return (
     <MDBCol md="4" key={photoIndex}>
       <figure>
-        <img src={process.env.PUBLIC_URL + imageSrc} alt="Gallery" className="img-fluid" onClick={()=>
-        this.setState({ photoIndex: privateKey, isOpen: true })
-        }
+        <LazyLoadImage
+          effect="opacity" 
+          placeholderSrc={process.env.PUBLIC_URL + '/images/preload-images/' + imageSrc}
+          src={process.env.PUBLIC_URL + '/images/' + imageSrc} 
+          alt="Gallery"
+          className="img-fluid" 
+          onClick={()=>
+            this.setState({ photoIndex: privateKey, isOpen: true })
+          }
         />
       </figure>
     </MDBCol>

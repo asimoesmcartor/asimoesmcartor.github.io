@@ -81,3 +81,7 @@ code {
 .center-cards {
   margin: 0 auto;
 }
+
+.lazy-load-image-loaded-display {
+  display:inline;
+}

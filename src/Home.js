@@ -1,6 +1,8 @@
 import React from 'react';
 import { MDBContainer, MDBRow } from "mdbreact";
 
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+
 import Cards from './components/cards';
 
 class Home extends React.Component {
@@ -8,7 +10,9 @@ class Home extends React.Component {
     return (
         <MDBContainer fluid>
           <MDBRow>
+          <LazyLoadComponent>
               <Cards />
+          </LazyLoadComponent>
           </MDBRow> 
         </MDBContainer>
     );
