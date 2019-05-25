@@ -82,6 +82,6 @@ code {
   margin: 0 auto;
 }
 
-.lazy-load-image-loaded-display {
-  display:inline;
+.lazy-load-image-background {
+  display: block !important;
 }

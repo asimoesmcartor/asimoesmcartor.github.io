@@ -30,3 +30,8 @@
     transform: rotate(360deg);
   }
 }
+
+#root > div > div.container > div > div.col-10 > div > div > section > div > div:nth-child(1) > div > a > button > i,
+#root > div > div.container > div > div.col-10 > div > div > section > div > div:nth-child(2) > div > a > button > i {
+  padding-right:0.3rem;
+}

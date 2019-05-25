@@ -84,11 +84,10 @@ class CanvasLines extends React.Component {
         <div id="border">
           <div id="frame">
             <div id="circle-crop">
-              <canvas id="lines-circle" ref="canvas" width={640} height={425} />
+              <canvas id="lines-circle" ref="canvas" width={500} height={300} />
             </div>
           </div>
         </div>
-        <h3>Generative Lines</h3>
         {/* <Button onClick={this.newColor}>New Color</Button> */}
       </div>
     );
