@@ -12,14 +12,14 @@ state = {
   photoIndex: 0,
   isOpen: false,
   images: [
-    'gallery-1.jpg',
-    'gallery-2.jpg',
-    'gallery-4.jpg',
-    'gallery-5.jpg',
-    'gallery-6.jpg',
-    'gallery-7.jpg',
-    'gallery-8.jpg',
-    'gallery-9.jpg'
+    process.env.PUBLIC_URL + '/images/gallery-1.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-2.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-4.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-5.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-6.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-7.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-8.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-9.jpg'
   ]
 }
 
@@ -32,11 +32,10 @@ return images.map(imageSrc => {
   const privateKey = photoIndex;
   return (
     <MDBCol md="4" key={photoIndex}>
-      <figure>
+      <figure classname="gallery-images" onContextMenu={(e)=> e.preventDefault()}>
         <LazyLoadImage
           effect="opacity" 
-          placeholderSrc={process.env.PUBLIC_URL + '/images/preload-images/' + imageSrc}
-          src={process.env.PUBLIC_URL + '/images/' + imageSrc} 
+          src={imageSrc} 
           alt="Gallery"
           className="img-fluid" 
           onClick={()=>
@@ -53,29 +52,31 @@ render() {
 const { photoIndex, isOpen, images } = this.state;
   return (
       <MDBContainer className="mt-5">
-        <div className="mdb-lightbox no-margin">
+        <div className="mdb-lightbox no-margin gallery-images">
           <MDBRow className="">
             {this.renderImages()}
           </MDBRow>
         </div>
         {isOpen && (
-        <Lightbox
-          mainSrc={images[photoIndex]}
-          nextSrc={images[(photoIndex + 1) % images.length]}
-          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-          imageTitle={photoIndex + 1 + "/" + images.length}
-          onCloseRequest={() => this.setState({ isOpen: false })}
-          onMovePrevRequest={() =>
-            this.setState({
-              photoIndex: (photoIndex + images.length - 1) % images.length
-            })
-          }
-          onMoveNextRequest={() =>
-            this.setState({
-              photoIndex: (photoIndex + 1) % images.length
-            })
+        <div onContextMenu={(e)=> e.preventDefault()}>
+          <Lightbox
+            mainSrc={images[photoIndex]}
+            nextSrc={images[(photoIndex + 1) % images.length]}
+            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+            imageTitle={photoIndex + 1 + "/" + images.length}
+            onCloseRequest={() => this.setState({ isOpen: false })}
+            onMovePrevRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + images.length - 1) % images.length
+              })
             }
-          />
+            onMoveNextRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + 1) % images.length
+              })
+              }
+            />
+          </div>
         )}
       </MDBContainer>
     );
