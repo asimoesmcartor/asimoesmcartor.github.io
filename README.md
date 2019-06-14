@@ -4,6 +4,7 @@ This branch is held to keep a record of my main production code that is used pri
 
 ### In Development (may look bad/weird)
 
+- Fixed issue with images now loading in Lightbox
 - Added lazy loading feature to images and components.
 - Created centralized hub for my projects.
 - Successfully split out Generative Lines app and imported it into React.
