@@ -12,14 +12,14 @@ state = {
   photoIndex: 0,
   isOpen: false,
   images: [
-    process.env.PUBLIC_URL + '/images/gallery-1.jpg',
-    process.env.PUBLIC_URL + '/images/gallery-2.jpg',
-    process.env.PUBLIC_URL + '/images/gallery-4.jpg',
-    process.env.PUBLIC_URL + '/images/gallery-5.jpg',
-    process.env.PUBLIC_URL + '/images/gallery-6.jpg',
-    process.env.PUBLIC_URL + '/images/gallery-7.jpg',
-    process.env.PUBLIC_URL + '/images/gallery-8.jpg',
-    process.env.PUBLIC_URL + '/images/gallery-9.jpg'
+    process.env.PUBLIC_URL + '/images/preload-images/gallery-1.jpg',
+    process.env.PUBLIC_URL + '/images/preload-images/gallery-2.jpg',
+    process.env.PUBLIC_URL + '/images/preload-images/gallery-4.jpg',
+    process.env.PUBLIC_URL + '/images/preload-images/gallery-5.jpg',
+    process.env.PUBLIC_URL + '/images/preload-images/gallery-6.jpg',
+    process.env.PUBLIC_URL + '/images/preload-images/gallery-7.jpg',
+    process.env.PUBLIC_URL + '/images/preload-images/gallery-8.jpg',
+    process.env.PUBLIC_URL + '/images/preload-images/gallery-9.jpg'
   ]
 }
 
@@ -32,12 +32,12 @@ return images.map(imageSrc => {
   const privateKey = photoIndex;
   return (
     <MDBCol md="4" key={photoIndex}>
-      <figure classname="gallery-images" onContextMenu={(e)=> e.preventDefault()}>
+      <figure classname="" onContextMenu={(e)=> e.preventDefault()}>
         <LazyLoadImage
           effect="opacity" 
           src={imageSrc} 
           alt="Gallery"
-          className="img-fluid" 
+          className="img-fluid gallery-images" 
           onClick={()=>
             this.setState({ photoIndex: privateKey, isOpen: true })
           }
@@ -52,7 +52,7 @@ render() {
 const { photoIndex, isOpen, images } = this.state;
   return (
       <MDBContainer className="mt-5">
-        <div className="mdb-lightbox no-margin gallery-images">
+        <div className="mdb-lightbox no-margin">
           <MDBRow className="">
             {this.renderImages()}
           </MDBRow>
