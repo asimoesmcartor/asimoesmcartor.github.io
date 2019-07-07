@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route} from 'react-router-dom';
 import Home from './Home';
 import Gallery from './Gallery';
 import Projects from './Projects';
@@ -13,7 +13,7 @@ import NavMenu from './components/nav';
 class App extends Component {
   render() {
     return (
-     <HashRouter basename="/">
+     <BrowserRouter basename="/">
         <div className="App">
           <NavMenu />
           <MDBContainer>
@@ -28,7 +28,7 @@ class App extends Component {
             </MDBRow>
           </MDBContainer>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }

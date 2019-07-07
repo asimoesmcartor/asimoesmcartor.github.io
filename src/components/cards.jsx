@@ -14,7 +14,7 @@ const Cards = () => (
   <h2 className="h1-responsive font-weight-bold my-5">
     Things I am working on
   </h2>
-  <p className="grey-text w-responsive mx-auto mb-5">
+  <p className="grey-text text-left w-responsive mx-auto mb-5">
     I built this website using React components to become more familiar with 
     breaking out my projects into components. The Gallery section holds my photos that 
     I have taken around the world. The Projects section holds my web projects that I 
