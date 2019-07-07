@@ -12,14 +12,14 @@ state = {
   photoIndex: 0,
   isOpen: false,
   images: [
-    process.env.PUBLIC_URL + '/images/preload-images/gallery-1.jpg',
-    process.env.PUBLIC_URL + '/images/preload-images/gallery-2.jpg',
-    process.env.PUBLIC_URL + '/images/preload-images/gallery-4.jpg',
-    process.env.PUBLIC_URL + '/images/preload-images/gallery-5.jpg',
-    process.env.PUBLIC_URL + '/images/preload-images/gallery-6.jpg',
-    process.env.PUBLIC_URL + '/images/preload-images/gallery-7.jpg',
-    process.env.PUBLIC_URL + '/images/preload-images/gallery-8.jpg',
-    process.env.PUBLIC_URL + '/images/preload-images/gallery-9.jpg'
+    process.env.PUBLIC_URL + '/images/gallery-1.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-2.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-4.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-5.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-6.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-7.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-8.jpg',
+    process.env.PUBLIC_URL + '/images/gallery-9.jpg'
   ]
 }
 
