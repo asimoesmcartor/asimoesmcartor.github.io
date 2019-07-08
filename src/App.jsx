@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route } from "react-router-dom";
-// import createBrowserHistory from 'history/createBrowserHistory';
 
 import Home from './Home';
 import Gallery from './Gallery';
@@ -12,11 +11,6 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 //Components imports
 import NavMenu from './components/nav';
-
-// const history = createBrowserHistory({
-//   forceRefresh: true,
-//   basename: process.env.PUBLIC_URL
-// });
 
 class App extends Component {
   render() {

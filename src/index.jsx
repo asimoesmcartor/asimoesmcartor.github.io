@@ -5,7 +5,8 @@ import './styles/index.css';
 import "./styles/App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "mdbreact/dist/css/mdb.css";
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 
 
 import App from './App';
@@ -14,14 +15,20 @@ const rootElement = document.getElementById('root');
 
 if (rootElement.hasChildNodes()) {
   hydrate(
-  <BrowserRouter>
+  <Router
+    history={ createBrowserHistory }
+    basename={ process.env.PUBLIC_URL }
+  >
     <App />
-  </BrowserRouter>
+  </Router>
   , rootElement);
 } else {
   render(
-  <BrowserRouter>
+  <Router
+    history={ createBrowserHistory }
+    basename={ process.env.PUBLIC_URL }
+  >
     <App /> 
-  </BrowserRouter>
+  </Router>
   , rootElement);
 }
