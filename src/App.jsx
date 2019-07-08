@@ -4,8 +4,6 @@ import { Switch, Route } from "react-router-dom";
 import Home from './Home';
 import Gallery from './Gallery';
 import Projects from './Projects';
-import PageNotFound from './PageNotFound';
-
 
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
@@ -25,7 +23,7 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <Route path="/gallery/" component={Gallery} />
                 <Route path="/projects/" component={Projects} />
-                <Route component={PageNotFound} />
+                <Route component={<div>404 pages not found</div>} />
               </Switch>
               </MDBCol>
               <MDBCol />
