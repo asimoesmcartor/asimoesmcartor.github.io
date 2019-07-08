@@ -1,34 +1,43 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route} from 'react-router-dom';
+import { Switch, Route } from "react-router-dom";
+// import createBrowserHistory from 'history/createBrowserHistory';
+
 import Home from './Home';
 import Gallery from './Gallery';
 import Projects from './Projects';
+import PageNotFound from './PageNotFound';
+
 
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
-
 
 //Components imports
 import NavMenu from './components/nav';
 
+// const history = createBrowserHistory({
+//   forceRefresh: true,
+//   basename: process.env.PUBLIC_URL
+// });
+
 class App extends Component {
   render() {
     return (
-     <BrowserRouter basename="/">
         <div className="App">
           <NavMenu />
           <MDBContainer>
             <MDBRow>
               <MDBCol />
               <MDBCol size="10">
-                  <Route exact path="/" component={Home} />
-                  <Route path="/gallery/" component={Gallery} />
-                  <Route path="/projects/" component={Projects} />
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/gallery/" component={Gallery} />
+                <Route path="/projects/" component={Projects} />
+                <Route component={PageNotFound} />
+              </Switch>
               </MDBCol>
               <MDBCol />
             </MDBRow>
           </MDBContainer>
         </div>
-      </BrowserRouter>
     );
   }
 }

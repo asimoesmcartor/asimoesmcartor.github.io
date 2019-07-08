@@ -7,16 +7,21 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "mdbreact/dist/css/mdb.css";
 import { BrowserRouter } from 'react-router-dom';
 
+
 import App from './App';
 
 const rootElement = document.getElementById('root');
 
 if (rootElement.hasChildNodes()) {
-  hydrate(<App />, rootElement);
+  hydrate(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+  , rootElement);
 } else {
   render(
-  <BrowserRouter basename="/">
-    <App />
+  <BrowserRouter>
+    <App /> 
   </BrowserRouter>
   , rootElement);
 }
