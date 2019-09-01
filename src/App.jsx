@@ -28,7 +28,7 @@ class App extends Component {
     let b = baffle('.loading');
     b.set({
       speed: 300,
-      characters: 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz~!@#$%^&*()-+=[]{}|;:,./<>?',
+      characters: '▒░█ >▓//░ █>█░/ ██▒ ▓▓/░/ <▒▓▓ <░█ ░░█▒ ▒<░░',
     });
     b.reveal(2500)
   }
