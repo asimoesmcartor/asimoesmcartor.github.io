@@ -1,29 +1,18 @@
 import React from 'react';
-import {  MDBRow, MDBCol, MDBCardBody, MDBIcon, MDBBtn, MDBView, MDBMask } from "mdbreact";
-import { Link } from 'react-router-dom';
+import {  MDBCol } from "mdbreact";
+// import { Link } from 'react-router-dom';
 
 
 //Loads components later to give time for images to come in.
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 
 
 const Cards = () => (
-  <section className="text-center my-5">
-  <h2 className="h1-responsive font-weight-bold my-5">
-    Things I am working on
-  </h2>
-  <p className="grey-text text-left w-responsive mx-auto mb-5">
-    I built this website using React components to become more familiar with 
-    breaking out my projects into components. The Gallery section holds my photos that 
-    I have taken around the world. The Projects section holds my web projects that I 
-    have been working on over the past few years.
-  </p>
-  
 
-  <MDBRow className="text-center">
-    <MDBCol lg="6" md="12" className="mb-lg-0 mb-6">
+/*  DECIDED TO RETIRE THE CARDS FOR NOW -- MAY BRING BACK LATER.
+ <MDBCol lg="6" md="12" className="mb-lg-0 mb-6">
       <Link to="/gallery">
         <MDBView className="overlay rounded z-depth-1" waves>
           <LazyLoadImage
@@ -76,8 +65,8 @@ const Cards = () => (
         </Link>
       </MDBCardBody>
     </MDBCol>
-  </MDBRow>
-</section>
+  */
+
 );
 
 export default Cards;

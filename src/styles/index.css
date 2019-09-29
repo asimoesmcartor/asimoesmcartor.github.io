@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1d1f20;
 }
 
 canvas {
@@ -16,7 +17,7 @@ canvas {
 #border {
   box-sizing: border-box;
   position: relative;
-  background: black;
+  background: rgb(231, 231, 231);
   background-image: -webkit-gradient(
     linear,
     right top,

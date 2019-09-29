@@ -3,9 +3,9 @@ import React from 'react';
 
 class CanvasLines extends React.Component {
   componentDidMount() {
-    //             ╔═╗╔═╗╔╗╔╔═╗╦═╗╔═╗╔╦╗╦╦  ╦╔═╗  ╦  ╦╔╗╔╔═╗╔═╗
+    //              ╔═╗╔═╗╔╗╔╔═╗╦═╗╔═╗╔╦╗╦╦  ╦╔═╗  ╦  ╦╔╗╔╔═╗╔═╗
     //             ║ ╦║╣ ║║║║╣ ╠╦╝╠═╣ ║ ║╚╗╔╝║╣   ║  ║║║║║╣ ╚═╗
-    //             ╚═╝╚═╝╝╚╝╚═╝╩╚═╩ ╩ ╩ ╩ ╚╝ ╚═╝  ╩═╝╩╝╚╝╚═╝╚═╝
+    //            ╚═╝╚═╝╝╚╝╚═╝╩╚═╩ ╩ ╩ ╩ ╚╝ ╚═╝  ╩═╝╩╝╚╝╚═╝╚═╝
 
     // Creates pastel RGB color
     const pastelColors = () => {
@@ -75,7 +75,29 @@ class CanvasLines extends React.Component {
       var boxShadowColor = '0px 0px 400px -15px ' + rndPastelColor;
       document.getElementById('circle-crop').style.boxShadow = boxShadowColor;
     };
-    setInterval(generativeCircle, 100);
+ 
+    function interval(func, wait, times){
+      var interv = function(w, t){
+          return function(){
+              if(typeof t === "undefined" || t-- > 0){
+                  setTimeout(interv, w);
+                  try{
+                      func.call(null);
+                  }
+                  catch(e){
+                      t = 0;
+                      throw e.toString();
+                  }
+              }
+          };
+      }(wait, times);
+  
+      setTimeout(interv, wait);
+  };
+
+    interval(function(){
+      generativeCircle();
+    }, 100, 100000);
   }
 
   render() {

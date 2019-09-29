@@ -49,6 +49,7 @@ return images.map(imageSrc => {
 }
 
 render() {
+
 const { photoIndex, isOpen, images } = this.state;
   return (
       <MDBContainer className="mt-5">

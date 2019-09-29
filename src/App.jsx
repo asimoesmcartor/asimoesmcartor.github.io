@@ -7,9 +7,9 @@ import Projects from './Projects';
 import baffle from 'baffle';
 
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import NavMenu from './components/nav';
 
 //Components imports
-import NavMenu from './components/nav';
 
 function demoAsyncCall() {
   return new Promise((resolve) => setTimeout(() => resolve(), 2500));
@@ -19,7 +19,7 @@ function demoAsyncCall() {
 
 class App extends Component {
   state = {
-    loading: true
+    loading: false
   };
 
   componentDidMount() {
@@ -50,24 +50,21 @@ class App extends Component {
               <MDBCol></MDBCol>
             </MDBRow>
           </MDBContainer>
+
       );
     }
 
     return (
         <div className="App">
-          <NavMenu />
           <MDBContainer>
-            <MDBRow>
-              <MDBCol />
-              <MDBCol size="10">
+            <MDBRow className="my-5 gradient-border">
+            <NavMenu/>
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/gallery/" component={Gallery} />
                 <Route path="/projects/" component={Projects} />
                 <Route component={<div>404 pages not found</div>} />
               </Switch>
-              </MDBCol>
-              <MDBCol />
             </MDBRow>
           </MDBContainer>
         </div>
